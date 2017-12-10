@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Abe's Cozy Rooms</title>
+    <style media="screen">
+      body {
+        margin: 0px;
+        background-color: #111;
+        text-align: center;
+      }
+      content {
+        float: left;
+        margin: 20px;
+      }
+      img {
+        height: 400px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pictures">
+
+    </div>
+    <script>
+        String.prototype.lpad = function(padString, length) {
+            var str = this;
+            while (str.length < length)
+                str = padString + str;
+            return str;
+        }
+
+        $pictures = document.querySelector("#pictures");
+        for (x = 1; x <= 30; x++) {
+            var $a = document.createElement("a");
+            var $pic = document.createElement("img");
+            const url = x.toString().lpad('0', 4) + ".jpg";
+            $pic.setAttribute("src", url);
+            $a.append($pic);
+            $a.setAttribute("href", url);
+            $pictures.append($a);
+        }
+    </script>
+  </body>
+</html>
