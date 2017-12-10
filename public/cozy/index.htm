@@ -35,7 +35,7 @@
         for (x = 1; x <= 30; x++) {
             var $a = document.createElement("a");
             var $pic = document.createElement("img");
-            const url = x.toString().lpad('0', 4) + ".jpg";
+            const url = "/cozy/" + x.toString().lpad('0', 4) + ".jpg";
             $pic.setAttribute("src", url);
             $a.append($pic);
             $a.setAttribute("href", url);
