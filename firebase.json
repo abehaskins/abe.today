@@ -1,9 +1,12 @@
 {
   "hosting": {
     "public": "public",
-"rewrites": [ {
-  "source": "/share/**",
-  "destination": "/share/index.html"
-} ]
+  "rewrites": [ {
+    "source": "/share/**",
+    "destination": "/share/index.html"
+  }, {
+    "source": "/cozy",
+    "destination": "/cozy/index.htm"
+  } ]
   }
 }
